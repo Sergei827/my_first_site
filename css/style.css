@@ -1,0 +1,61 @@
+
+/* стили шапки */
+.header-wrapper{
+	padding: 25px;
+    font-family: Arial, Verdana, sans-serif;
+	font-size: 45px;
+	background-color: #FFFFFF;
+	border-bottom: 2px solid #A4A4A4;
+}
+
+.title-nix{
+	color: #DF0101;
+	font-weight: bold;
+}
+
+.title-lessons{
+	color: #0080FF;
+}
+
+/* стили меню */
+.menu{
+	list-style: none;
+	padding-left: 35px;
+	padding-right: 35px;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 0px;
+    border-bottom: 2px solid #A4A4A4;
+}
+
+.menu-item{
+	padding: 10px;
+	display: inline-block;
+	font-size: 18px;
+}
+
+.menu-link{
+	display: block;
+	color: #D2691E;
+    text-decoration: none;
+	font-size: 18px;
+	border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+.menu-link:hover{
+	color: #FF4500;
+    border-bottom: 2px solid #F4A460;
+}
+
+
+/* стили основного содержимого */
+.main-wrapper{
+	padding: 30px 15px 30px 15px;
+}
+
+
+
+/* стили подвала */
+.footer-copy{
+	color: #848484;
+	text-align: center;
+}
