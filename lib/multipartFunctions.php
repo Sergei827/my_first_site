@@ -63,41 +63,31 @@ function createMultiplicationTable($multiArray)
 
 //РАЗУКРАШЕНАЯ ТАБЛИЦА 
 
-
 function decorateMultiplicationTableNumbers($number, $colorClassArr)
 {
    $str='';
 
    
-   for($i=0; $i<count($colorClassArr); $i++)
-	   {
-		   if($number>=0 && $number<10)
-		   {	   
-		       if($colorClassArr[$i])
-		       {
-		           $str.="<span class='>".$colorClassArr[$i]."$i</span>";
-		       }
-		   }
+   
+	if($number>=0 && $number<10)
+	{	   
+		
+		$str.="<span class='".$colorClassArr[$number]."'>{$number}</span>";
+	}
 		   
-		   if($number<10 && $number>100)
-           {
-	           $unitsRank=$number%10;
-	           $tensRank=($number-$unitsRank)/10;
+    if($number>=10 && $number<=100)
+    {
+	    $unitsRank=$number%10;
+	    $tensRank=($number-$unitsRank)/10;
 	   
-	           for($i=0; $i<count($colorClassArr); $i++)
-	           {
-		           if($colorClassArr[$i])
-		           {
-		               $str.="<span class='>".$colorClassArr[$i]."$tensRank</span>";
-			           $str.="<span class='>".$colorClassArr[$i]."$unitsRank</span>";
-		           }
-	           }
-           } 
-	   }
+	    $str.="<span class='".$colorClassArr[$tensRank]."'>{$tensRank}</span>";
+	    $str.="<span class='".$colorClassArr[$unitsRank]."'>{$unitsRank}</span>";
+	           
+    } 
+	   
 
     return $str;
 }
-
 
 
 function createColorMultiplicationTable($multiArray, $colorClassArr)
@@ -107,10 +97,12 @@ function createColorMultiplicationTable($multiArray, $colorClassArr)
 	
 	$colorBase=decorateMultiplicationTableNumbers($base, $colorClassArr);
 	
+	$tableStr='<table>';
+	
 	for($i=1; $i<11; $i++)
 	{
-		$color_i=decorateMultiplicationTableNumbers($i);
-		$colorResult=decorateMultiplicationTableNumbers($multiArray[$i]);
+		$color_i=decorateMultiplicationTableNumbers($i, $colorClassArr);
+		$colorResult=decorateMultiplicationTableNumbers($multiArray[$i], $colorClassArr);
 		
 	    $tableStr.=concatStrings(
 		              "<tr><td>", 
@@ -123,7 +115,8 @@ function createColorMultiplicationTable($multiArray, $colorClassArr)
 			          );			  
 	}
 	
-   
+    $tableStr.='</table>';
+	
 	return $tableStr;
 }
 

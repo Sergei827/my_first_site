@@ -18,6 +18,9 @@ if(isset($_GET['page']))
 		    break;
 		case 'lesson1':
 			require_once "templates/template_multiplication_table.php";
+            break;
+        case 'lesson2':
+            require_once "templates/template_color_multiplication_table.php";
             break;			
 	}
 }

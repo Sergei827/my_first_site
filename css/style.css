@@ -74,3 +74,21 @@
 	border: 1px solid #000000;
 }
 
+/* ЦВЕТНАЯ ТАБЛИЦА УМНОЖЕНИЯ */
+
+.red-text{
+	color: #DF0101;
+}
+
+.green-text{
+	color: #088A08;
+}
+
+.yellow-text{
+	color: #FFFF00;
+}
+
+.blue-text{
+	color:#0000FF;
+}
+
