@@ -1,3 +1,5 @@
+<!-- ШАБЛОН ЦВЕТНОЙ ТАБЛИЦЫ УМНОЖЕНИЯ -->
+
 <table class='all-multiplication-table'>
     <tr>
 	    <td class='multiplication'>

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<!-- ШАБЛОН РАЗДЕЛА HEAD -->
+
 <html>
 <head>
     <meta charset='utf-8'>

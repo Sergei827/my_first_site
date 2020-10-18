@@ -6,7 +6,6 @@
    Нулевой элемент массива равен base,
    все остальные результатам умножения
 */
-
 function getMultiplicationResults($base) 
 {
     $ressultsArray=[];
@@ -34,8 +33,12 @@ function concatStrings(...$strParam)
 	return $str;
 }
 
-//принимает массив возвращенный функцией getMultiplicationResults
-//возвращает строку с таблицей умножения
+/*
+    Принимает массив возвращенный функцией getMultiplicationResults
+    возвращает строку с таблицей умножения для числа от 1 до 10.
+	Не работает без функции concatStrings.
+	
+*/
 function createMultiplicationTable($multiArray)
 {
 	
@@ -62,7 +65,12 @@ function createMultiplicationTable($multiArray)
 
 
 //РАЗУКРАШЕНАЯ ТАБЛИЦА 
-
+/* 
+    Принимает число number и массив с классами цветов colorClassArr.
+	colorClassArr определен в файле conf/configTemplates.php.
+	Возвращает строку с разукрашеным числом
+	
+*/
 function decorateMultiplicationTableNumbers($number, $colorClassArr)
 {
    $str='';
@@ -90,6 +98,12 @@ function decorateMultiplicationTableNumbers($number, $colorClassArr)
 }
 
 
+/*
+    Принимает массив возвращенный функцией getMultiplicationResults (multiArray)
+	и массив с именами классов цветов (colorClassArr).
+	Возвращает разукрашенную таблицу умножения для числа от 1 до 10.
+	Не работает без функции decorateMultiplicationTableNumbers
+*/
 function createColorMultiplicationTable($multiArray, $colorClassArr)
 {
 	$base=$multiArray[0];

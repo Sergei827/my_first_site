@@ -1,4 +1,5 @@
 
+/* ОСНОВНЫЕ СТИЛИ */
 /* стили шапки */
 .header-wrapper{
 	padding: 25px;
@@ -90,5 +91,22 @@
 
 .blue-text{
 	color:#0000FF;
+}
+
+
+
+/* БЛОК ВЫВОДА РЕВЕРСИРОВАНОЙ СТРОКИ */
+
+.revers-text-form{
+	padding: 15px 35px 15px 35px;
+}
+
+.revers-text-field{
+	width: 350px;
+	border: 2px solid #F4A460;
+}
+
+.revers-text-box{
+	padding: 15px 35px 15px 35px;
 }
 

@@ -1,3 +1,5 @@
+<!-- ШАБЛОН ШАПКИ САЙТА -->
+
 <header>
     <div class='header-wrapper'>
 	   <span class='title-nix'><?php echo HEAD_FIRST_TITLE; ?></span> 
